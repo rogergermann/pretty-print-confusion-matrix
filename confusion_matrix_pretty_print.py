@@ -222,11 +222,9 @@ def plot_confusion_matrix_from_data(y_test, predictions, columns=None, annot=Tru
 
     confm = confusion_matrix(y_test, predictions)
     cmap = 'Oranges';
-    fz = 11;
-    figsize=[9,9];
     show_null_values = 2
     df_cm = DataFrame(confm, index=columns, columns=columns)
-    pretty_plot_confusion_matrix(df_cm, fz=fz, cmap=cmap, figsize=figsize, show_null_values=show_null_values, pred_val_axis=pred_val_axis)
+    pretty_plot_confusion_matrix(df_cm, fz=fz, lw=lw, cmap=cmap, figsize=figsize, show_null_values=show_null_values, pred_val_axis=pred_val_axis)
 #
 
 
